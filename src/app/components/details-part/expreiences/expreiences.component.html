@@ -1,0 +1,33 @@
+<div>
+  @for(experience of experiences ; track experience.company){
+  <a
+    class="flex my-16 text-sm rounded-3xl p-4 transition-all duration-500 hover:opacity-100 opacity-70 hover:bg-gray-800 bg-opacity-20"
+    [href]="experience.link"
+    target="_blank"
+  >
+    <div class="w-[30%]">
+      <ul>
+        <li>{{ experience.duration }}</li>
+        <li>{{ experience.location }}</li>
+      </ul>
+    </div>
+    <div class="w-[70%]">
+      <ul>
+        <li class="text-xl font-bold">{{ experience.company }}</li>
+        <li class="text-xs my-1">{{ experience.position }}</li>
+        <li class="my-4">
+          <ul>
+            @for(item of experience.responsibilities ; track $index ){
+            <li class="list-disc">
+              {{ item }}
+            </li>
+            }
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </a>
+  }
+
+  <a target="_blank" href="example.pdf" class="">View Full Résumé </a>
+</div>
