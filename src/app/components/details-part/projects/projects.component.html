@@ -3,7 +3,7 @@
   <a
     [href]="project.link"
     target="_blank"
-    class="flex gap-x-12 p-4 my-16 rounded-3xl transition-all duration-500 hover:opacity-100 opacity-70 hover:bg-gray-800 bg-opacity-20 hover:scale-105"
+    class="flex gap-x-12 p-4 my-16 rounded-3xl transition-all duration-500 hover:opacity-100 opacity-70 hover:bg-gray-800 bg-opacity-20"
   >
     <img
       [src]="project.image"
@@ -18,7 +18,9 @@
     </div>
   </a>
   }
-  <a target="_blank" href="https://github.com/hakankaraahmet"
-    >View All Projects
-  </a>
+  <div class="hover:scale-110 w-fit hover:ml-2 transition-all duration-500">
+    <a target="_blank" href="https://github.com/hakankaraahmet"
+      >View All Projects
+    </a>
+  </div>
 </div>
